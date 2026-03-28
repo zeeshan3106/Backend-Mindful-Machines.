@@ -1,8 +1,6 @@
 import UserModel from "../models/user.model.js";
 import bcrypt from "bcryptjs";
 import jwt from 'jsonwebtoken'
-import verification from "../../Utils/verifyEmailTemplate.js";
-import SendEmailFun from "../config/sendEmail.js";
 
 
 export async function Registration(req, res) {

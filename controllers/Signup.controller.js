@@ -1,8 +1,6 @@
 
 import signupmodel from "../models/signup.js"
 import bcrypt from "bcryptjs"
-import UserModel from "../models/user.model.js"
-
 
 
 export async function SignupController(req, res) {
