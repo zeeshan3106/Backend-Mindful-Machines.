@@ -118,15 +118,6 @@ app.use('/api/wish',WishRouter)
 
 app.use('/api/Image',ImageRouter)
 
-Connencted().then(()=>{
+Connencted()
 
-       console.log("Database is live on server",process.env.PORT,"✅")
-
-     app.listen(process.env.PORT, () => {
-  console.log("Server is Live on port", process.env.PORT, "✅");
-});
- 
-
-})
-
-
+export default app;
