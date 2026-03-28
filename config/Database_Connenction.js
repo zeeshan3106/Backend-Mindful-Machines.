@@ -17,7 +17,7 @@ async function Connencted(){
     }
     catch(error){
         console.log("Database Connenction making error ", error)
-        process.exit(1)
+       
     }
 
 
