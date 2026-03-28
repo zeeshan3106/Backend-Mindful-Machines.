@@ -83,6 +83,7 @@ export async function GetByCategory(req,res){
 
          const categoryid = req.query.categoryid;
          const sortingId = req.query.sortingId
+         const pageid = req.query.page
 
        
 
@@ -90,10 +91,12 @@ console.log("sortingId:", `"${sortingId}"`);
 console.log("Does it match Name A to Z?", sortingId === "Name A to Z");
 
 
-         const limitid = 100
-         const page = 1
+         const limitid = 8
+         const page = pageid
 
          const skip=(page-1)*limitid
+
+         const totalpage = 
 
 
 console.log(sortingId)

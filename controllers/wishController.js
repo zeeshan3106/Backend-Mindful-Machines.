@@ -11,22 +11,34 @@ export async function WishGetController(req, res){
 
 
         const userId= req.jwtpayload.id
+        const pageid = req.query.page
 
+
+
+ const page = pageid
+ const limit = 5
+
+ const skip = (page - 1)*limit
 
  const WishGet = await wishmodel.find({
     userId:userId
- });
+ }).skip(skip).limit(limit)
+
+
  const totalwish = await  wishmodel.find({
     userId:userId
  }).countDocuments()
 
+ const totalpages = Math.ceil(totalwish/limit)
 
+console.log(totalpages)
 
  return res.status(200).json({
     error :false,
     success:true,
     data:WishGet,
-    totalwish
+    totalwish,
+    totalpages
  })
 
 

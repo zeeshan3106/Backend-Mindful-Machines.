@@ -120,11 +120,11 @@ app.use('/api/Image',ImageRouter)
 
 
 Connencted()
-/*app.listen(process.env.PORT , ()=>{
+app.listen(process.env.PORT , ()=>{
 console.log("Server Live")
 }
 
-)*/
+)
 
 
 
