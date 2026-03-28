@@ -10,7 +10,7 @@ import mongoose from 'mongoose';
 
 import multer from 'multer'
 import nodemon from 'nodemon'
-import Connencted from './config/Database Connenction.js';
+import Connencted from './config/Database_Connenction.js';
 import userRouter from './routes/user.route.js';
 import Productroute from './routes/Product.js';
 import ProfileRouter from './routes/Profile.js';
@@ -118,6 +118,14 @@ app.use('/api/wish',WishRouter)
 
 app.use('/api/Image',ImageRouter)
 
+
 Connencted()
+/*app.listen(process.env.PORT , ()=>{
+console.log("Server Live")
+}
+
+)
+
+*/
 
 export default app;
