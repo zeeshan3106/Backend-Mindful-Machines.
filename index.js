@@ -9,7 +9,7 @@ import jsonwebtoken from 'jsonwebtoken'
 import mongoose from 'mongoose';
 
 import multer from 'multer'
-import nodemon from 'nodemon'
+
 import Connencted from './config/Database_Connenction.js';
 import userRouter from './routes/user.route.js';
 import Productroute from './routes/Product.js';
@@ -24,7 +24,7 @@ import CategoryRouter from './routes/Category.js';
 import OrderRouter from './routes/Order.js';
 import DashboardRouter from './routes/Dashboard.js';
 import WishRouter from './routes/Wishlist.js';
-import serverless from 'serverless-http';
+
 import ImageRouter from './routes/Image.js';
 dotenv.config()
 const app = express()
