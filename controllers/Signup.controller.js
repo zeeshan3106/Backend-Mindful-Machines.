@@ -112,6 +112,15 @@ export async function SearchUsers(req,res){
     try{
      
 const element = req.query.element
+
+const pageid = req.query.page
+
+
+const page = pageid
+const limit = 5
+const skip = (page-1)*limit
+
+const totalItems = await signupmodel.find().countDocuments()
         const userFind = await signupmodel.find({
 
             $or:[
@@ -122,14 +131,17 @@ const element = req.query.element
                       {country:{$regex:element,$options:"i"}},
                       
             ]
-        })
-const Usercounts = userFind.length
+        }).skip(skip).limit(limit)
+const Usercounts = totalItems
+
+const totalPages = Math.ceil(totalItems/limit)
 
 return res.status(200).json({
     error:false,
     success:true,
     data:userFind,
-    Usercounts
+    Usercounts,
+    totalPages
 })
 
 

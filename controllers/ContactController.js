@@ -109,7 +109,12 @@ export async function SearchContacts(req, res){
     try{
 
         const element = req.query.element
+        const pageid = req.query.page
 
+        const page = pageid
+        const limit = 5
+        const skip = (page-1)*limit
+   const totalitems = await ContactModel.find().countDocuments()
 
         const searcheditems = await ContactModel.find({
     
@@ -120,17 +125,18 @@ export async function SearchContacts(req, res){
             
             
             
-            ] })
+            ] }).skip(skip).limit(limit)
+const totalPages = Math.ceil(totalitems/limit)
 
-
-            const ContactsCounts = searcheditems.length
+            const ContactsCounts = totalitems
 
 
                 return res.status(200).json({
                     error:false,
                     success:true,
                     data:searcheditems,
-                    ContactsCounts
+                    ContactsCounts,
+                    totalPages
                 })
 
 

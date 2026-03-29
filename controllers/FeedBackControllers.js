@@ -7,6 +7,8 @@ try{
     const {Name, Email, Message}=req.body
 
 
+
+
     const Feedback = new FeedModel({
     userId,  
         Name, Email, Message
@@ -44,7 +46,9 @@ export async function Feedbacks(req,res){
 
     try{
 
-        const limit = 20
+        const pageid = req.query.page
+
+        const limit = 5
         const pages = 1
         const skip = (pages-1)*limit
       
@@ -305,6 +309,21 @@ export async function FeedSearch (req ,res){
     try{
 
         const element = req.query.element
+        const pageid = req.query.page
+console.log(pageid)
+
+        const page = pageid
+        const limit = 5
+        const skip = (page-1)*limit
+         
+
+        const totalPageswehave = await FeedModel.find().countDocuments()
+           
+        
+
+
+
+
         const searchedfeeds = await FeedModel.find({
 
             $or:[
@@ -315,9 +334,13 @@ export async function FeedSearch (req ,res){
 
 
 
-        })
+        }).skip(skip).limit(limit)
 
-        const FeedbackCount =searchedfeeds.length
+        const FeedbackCount =totalPageswehave 
+
+        const totalPages = Math.ceil(totalPageswehave/limit)
+
+        console.log(totalPages)
 
 
 
@@ -325,7 +348,8 @@ export async function FeedSearch (req ,res){
             error:false,
             success:true,
             data:searchedfeeds,
-            FeedbackCount
+            FeedbackCount,
+            totalPages
         })
 
 
