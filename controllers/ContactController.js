@@ -125,7 +125,7 @@ export async function SearchContacts(req, res){
             
             
             
-            ] }).skip(skip).limit(limit)
+            ] }).skip(skip).limit(limit).sort({createdAt:-1})
 const totalPages = Math.ceil(totalitems/limit)
 
             const ContactsCounts = totalitems
