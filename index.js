@@ -26,6 +26,7 @@ import DashboardRouter from './routes/Dashboard.js';
 import WishRouter from './routes/Wishlist.js';
 
 import ImageRouter from './routes/Image.js';
+import SearchRouter from './routes/Search.js';
 dotenv.config()
 const app = express()
 app.use(cors());
@@ -112,7 +113,8 @@ console.log("✅ Login Successfully!")
 app.use('/api/admin',DashboardRouter)
 console.log("✅ Dashboard Displayed Successfully!")
 
-
+app.use('/api/search',SearchRouter)
+console.log("✅ search run successfully!")
 
 app.use('/api/wish',WishRouter)
 
