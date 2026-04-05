@@ -120,18 +120,13 @@ app.use('/api/wish',WishRouter)
 
 app.use('/api/Image',ImageRouter)
 
-async function startServer() {
-  try {
-    await connectDB(); // WAIT for DB
-    app.listen(process.env.PORT, () => {
-      console.log(`Server running on port ${process.env.PORT}`);
-    });
-  } catch (error) {
-    console.error("Failed to start server:", error);
-  }
+
+Connencted()
+app.listen(process.env.PORT , ()=>{
+console.log("Server Live")
 }
 
-startServer();
+)
 
 
 
