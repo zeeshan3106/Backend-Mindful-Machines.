@@ -1,5 +1,5 @@
 import {Router} from 'express'
-import { filteredData, getbyid, getbyidAndDelete, GetProduct, Product, UpdateProduct } from '../controllers/product.controller.js'
+import { filteredData, getbyid, getbyidAndDelete, GetProduct, Product, ProductDetail, UpdateProduct } from '../controllers/product.controller.js'
 import verifyuser from '../Middlewares/Jwt.middleware.js';
 import path from 'path';
 
@@ -30,6 +30,8 @@ console.log("Your Typical Product updation route Done")
 
 Productroute.get('/filterdata',filteredData)
 console.log("Filtered Data...")
+
+Productroute.get('/detail',ProductDetail)
 
 
 export default Productroute

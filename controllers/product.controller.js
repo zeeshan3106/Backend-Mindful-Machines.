@@ -360,3 +360,36 @@ export async function UpdateProduct(req, res) {
     });
   }
 }
+
+
+
+
+
+export async function ProductDetail(req,res){
+
+    try{
+
+        const _id = req.query.id
+
+
+        const detailitem = await ProductModel.find({_id:_id})
+
+        return res.status(200).json({
+            error:false,
+            success:true,
+            data:detailitem
+        })
+
+
+
+
+    }
+    catch(error){
+
+        return res.status(500).json({
+            error:true,
+            success:false,
+            message: error.message || error
+        })
+    }
+}
