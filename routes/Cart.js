@@ -8,7 +8,7 @@ const CartRouter=Router();
 
 CartRouter.post('/cart',CartPOST)
 
-CartRouter.get('/cartget',Cartget)
+CartRouter.get('/cartget',verifyuser,Cartget)
 
 
 CartRouter.get('/get',AddtoCart)

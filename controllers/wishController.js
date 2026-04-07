@@ -67,7 +67,7 @@ export async function PostWishlish(req,res){
 
     try{
 
-        const {_id}=req.body
+        const {_id}=req.query
         const userId= req.jwtpayload.id
 
         const Productfind = await ProductModel.findById(_id)
@@ -117,4 +117,39 @@ export async function PostWishlish(req,res){
 
 
 
+}
+
+
+
+
+
+export async function WishDelete(req,res){
+
+
+    try{
+
+        const _id = req.query._id
+
+        const DeleteItem = await wishmodel.findByIdAndDelete(_id)
+
+        return res.status(200).json({
+            error:false,
+            success:true,
+            data:DeleteItem
+        })
+
+    }
+    catch(error){
+
+
+        return res.status(500).json({
+            error:true,
+            success:false,
+            message:error.message || error
+        })
+
+
+
+
+    }
 }

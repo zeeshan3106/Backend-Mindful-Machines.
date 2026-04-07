@@ -70,6 +70,9 @@ export async function Cartget(req ,res){
 
          const userId = req.jwtpayload.id
 
+         console.log(userId)
+         console.log(_id)
+
 
   const Cartitem = await ProductModel.findById(_id);
 
@@ -88,7 +91,7 @@ export async function Cartget(req ,res){
     company: Cartitem.company
 });
 
-
+console.log(existingCartItem)
 const totalprice = Cartitem.price * Cartitem.quantity
 
      if(existingCartItem){
@@ -120,7 +123,7 @@ else{
 
      })
 
-
+console.log(CartAdding)
       
      await CartAdding.save();
 
