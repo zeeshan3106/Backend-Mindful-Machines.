@@ -393,3 +393,8 @@ export async function ProductDetail(req,res){
         })
     }
 }
+
+
+
+
+

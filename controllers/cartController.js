@@ -252,5 +252,49 @@ console.log("Sample price:", sample.price, "Type:", typeof sample.price);
 }
 
 
+export async function DeleteCart(req,res){
+
+
+    try{
+
+
+        const id = req.query._id
+
+
+        const deleteCartItem = await cartmodel.findByIdAndDelete(id)
+
+        return res.status(200).json({
+            error:false,
+            success:true,
+            data:deleteCartItem
+        })
+
+
+
+
+
+    }
+    catch(error){
+
+
+        return res.status(500).json({
+
+            error:true,
+            sucess:false,
+            message:error.message || error 
+            
+
+        })
+
+
+
+
+    }
+
+
+
+
+}
+
 
 
