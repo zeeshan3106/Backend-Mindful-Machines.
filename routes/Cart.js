@@ -8,12 +8,12 @@ const CartRouter=Router();
 
 CartRouter.post('/cart',CartPOST)
 
-CartRouter.get('/cartget',verifyuser,Cartget)
+CartRouter.get('/cartget',Cartget)
 
 
-CartRouter.get('/get',verifyuser,AddtoCart)
+CartRouter.get('/get',AddtoCart)
 
-CartRouter.delete('/delete',verifyuser,DeleteCart)
+CartRouter.delete('/delete',DeleteCart)
 
 export default CartRouter
 
