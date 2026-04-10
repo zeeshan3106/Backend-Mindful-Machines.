@@ -4,6 +4,7 @@ import verifyuser from "../Middlewares/Jwt.middleware.js";
 import path from 'path';
 
 import multer from "multer";
+import { ProfileControllerGet, ProfileControllerPut } from "../controllers/Profile.controller.js";
 
 const storage = multer.memoryStorage();
 
@@ -13,14 +14,15 @@ const upload = multer({storage:storage})
 const ProfileRouter = Router()
 
 
-ProfileRouter.post('/profile',  upload.single("key")  ,ProfileControler)
+ProfileRouter.post('/profiledf',  upload.single("key")  ,ProfileControler)
 console.log('Product route file loaded');
-
-
 
 ProfileRouter.get('/getprofiles',verifyuser,ProfileGet)
 
-console.log('Profile 2nd route file loaded');
+ProfileRouter.post('/profile',verifyuser,ProfileControllerPut)
+
+ProfileRouter.get('/profile-items',ProfileControllerGet)
+
 
 export default ProfileRouter
 
