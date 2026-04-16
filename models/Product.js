@@ -56,8 +56,9 @@ quantity:{
     type:String
 },
 
-ratings:{type:String},
+ratings:{type:Number},
 avaiability:{type:String},
+available:{type:String},
 
 image:{
    

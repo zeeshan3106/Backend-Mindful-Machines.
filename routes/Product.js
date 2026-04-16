@@ -1,5 +1,5 @@
 import {Router} from 'express'
-import { Avalablity, filteredData, getbyid, getbyidAndDelete, GetProduct, PriceAPI, Product, ProductDetail, Ratings, UpdateProduct } from '../controllers/product.controller.js'
+import { Avalablity, filteredData, getbyid, getbyidAndDelete, GetProduct, PriceAPI, Product, ProductDetail, Ratings, UNAvalablity, UpdateProduct } from '../controllers/product.controller.js'
 import verifyuser from '../Middlewares/Jwt.middleware.js';
 import path from 'path';
 
@@ -41,6 +41,7 @@ console.log("Filtered Data...")
 Productroute.get('/detail',ProductDetail)
 
 Productroute.get('/status',Avalablity)
+Productroute.get('/status-unavailable',UNAvalablity)
 Productroute.get('/custom-price',PriceAPI)
 
 Productroute.get('/ratings',Ratings)

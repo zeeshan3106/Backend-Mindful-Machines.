@@ -403,10 +403,43 @@ export async function Avalablity (req,res){
 
     try{
 
-        const statusid = ""
+     
+        const status = await ProductModel.find({  available: {$exists :true} })
 
 
-        const status = await ProductModel.find({avaiability:statusid})
+        console.log("Status",status)
+
+        return res.status(200).json({
+            error:false,
+            success:true,
+            data:status
+        })
+
+        
+
+    }
+    catch(error){
+
+        return res.status(500).json({
+            error:true,
+            success:false,
+            message:error.message || error
+        })
+
+
+
+
+
+    }
+}
+
+export async function UNAvalablity (req,res){
+
+    try{
+
+     
+        const status = await ProductModel.find({  available: {$exists :false} })
+
 
         console.log("Status",status)
 
@@ -473,8 +506,10 @@ export async function Ratings (req,res){
     try{
 
         const rating = req.query.rating
-
+        console.log(rating)
         const ratingData = await ProductModel.find({ratings:rating})
+
+        console.log("RAting " ,ratingData)
 
         return res.status(200).json({
             error:false,
