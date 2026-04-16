@@ -20,7 +20,8 @@ export async function Product(req,res){
     let product
 
     const {title,quantity,image,
-         category ,subcategory , price, description, oldPrice, isFeatured, productStock, company, discount, color, weight, size,location}= req.body
+         category ,subcategory , price, description, oldPrice, isFeatured, productStock, company, discount, color, weight, size,location}= 
+         req.body
      
 
          const Image = await cloudinary.uploader.upload(req.file.path , {folder:"Product-Display-Image"})
@@ -398,3 +399,97 @@ export async function ProductDetail(req,res){
 
 
 
+export async function Avalablity (req,res){
+
+    try{
+
+        const statusid = ""
+
+
+        const status = await ProductModel.find({avaiability:statusid})
+
+        console.log("Status",status)
+
+        return res.status(200).json({
+            error:false,
+            success:true,
+            data:status
+        })
+
+        
+
+    }
+    catch(error){
+
+        return res.status(500).json({
+            error:true,
+            success:false,
+            message:error.message || error
+        })
+
+
+
+
+
+    }
+}
+
+
+
+export async function PriceAPI(req,res){
+
+
+
+    try{
+        const {price}= req.query
+
+        const priceditem = await ProductModel.find({price:price})
+
+        return res.status(200).json({
+            error:false,
+            success:true,
+            data:priceditem
+        })
+
+    }
+    catch(error){
+
+        return res.status(500).json({
+            error:false,
+            success:true,
+            message:error.message || error
+        })
+
+
+
+    }
+}
+
+
+
+export async function Ratings (req,res){
+
+
+    try{
+
+        const rating = req.query.rating
+
+        const ratingData = await ProductModel.find({ratings:rating})
+
+        return res.status(200).json({
+            error:false,
+            success:true,
+            data:ratingData
+        })
+
+    }
+    catch(error){
+
+        return res.status(500).json({
+            error:true,
+            success:false,
+            message:error.message || error
+        })
+
+    }
+}

@@ -1,12 +1,19 @@
 import {Router} from 'express'
-import { filteredData, getbyid, getbyidAndDelete, GetProduct, Product, ProductDetail, UpdateProduct } from '../controllers/product.controller.js'
+import { Avalablity, filteredData, getbyid, getbyidAndDelete, GetProduct, PriceAPI, Product, ProductDetail, Ratings, UpdateProduct } from '../controllers/product.controller.js'
 import verifyuser from '../Middlewares/Jwt.middleware.js';
 import path from 'path';
 
 import multer from 'multer';
 
-const storage = multer.memoryStorage();
-const upload = multer ({storage:storage})
+const storage = multer.diskStorage({
+ 
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+    cb(null, file.fieldname + '-' + uniqueSuffix)
+  }
+})
+
+const upload = multer({ storage: storage })
 
 
 
@@ -33,5 +40,9 @@ console.log("Filtered Data...")
 
 Productroute.get('/detail',ProductDetail)
 
+Productroute.get('/status',Avalablity)
+Productroute.get('/custom-price',PriceAPI)
+
+Productroute.get('/ratings',Ratings)
 
 export default Productroute

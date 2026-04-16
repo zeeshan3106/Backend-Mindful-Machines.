@@ -361,16 +361,20 @@ export async function SearchPRoducts(req, res){
     try{
 
         const demand = req.query.searchId
+        console.log(demand)
 
-        if(!demand){
-            return ers.status(400).json({
+        if(demand===null || ""){
+
+             const Searching = await ProductModel.find({
+        })
+            return ers.status(200).json({
                 error:true,
                 success:false,
-                message:"Put Any Element in Search Bar"
+               data:Searching
             })
         }
 
-
+       else{
         const Searching = await ProductModel.find({
 
             $or:[
@@ -410,6 +414,8 @@ export async function SearchPRoducts(req, res){
             
 
         })
+
+    }
     }
     catch(error){
 

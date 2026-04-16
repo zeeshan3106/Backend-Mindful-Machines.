@@ -4,14 +4,14 @@ const productSchema = new mongoose.Schema({
 
     title:{
         type:String,
-        require:true
+     
     },
     description:{
         type:String,
 },
 category:{
     type:String,
-    require:true
+  
    
 },
 subcategory:{
@@ -20,7 +20,7 @@ subcategory:{
 },
 price:{
     type:String,
-    require:true
+  
    
 },
 oldPrice:{
