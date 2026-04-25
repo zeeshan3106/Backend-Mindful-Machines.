@@ -4,6 +4,7 @@ import verifyuser from '../Middlewares/Jwt.middleware.js';
 import path from 'path';
 
 import multer from 'multer';
+import { GetProductInformation, ProductDetailElemnts } from '../controllers/product.controllers.js';
 
 const storage = multer.diskStorage({
  
@@ -45,5 +46,12 @@ Productroute.get('/status-unavailable',UNAvalablity)
 Productroute.get('/custom-price',PriceAPI)
 
 Productroute.get('/ratings',Ratings)
+
+
+
+Productroute.post('/productdetail',upload.single('image'),ProductDetailElemnts)
+
+Productroute.get('/product-info',GetProductInformation)
+
 
 export default Productroute
