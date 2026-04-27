@@ -1,5 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
+
 const productSchema = new mongoose.Schema({
 
     title:{
@@ -62,18 +63,42 @@ available:{type:String},
 
 image:{
    
-}
+},
+Slider1:{type:String},
+Slider2:{type:String}
+,
 
-,functiontextone:{type:String},
-    functiontexttwo:{type:String},
-    functiontextthree:{type:String},
-    functiontextfour:{type:String},
-    functiontextfive:{type:String},
-    functiontextsix:{type:String},
-    functiontextseven:{type:String},
-    functiontexteight:{type:String},
-    functiontextnine:{type:String},
-    functiontextten:{type:String},
+
+Slider1:{type:String},
+Slider2:{type:String},
+Slider3:{type:String},
+Slider4:{type:String},
+Slider5:{type:String},
+Slider6:{type:String},
+Slider7:{type:String},
+Slider8:{type:String},
+Slider9:{type:String},
+Slider10:{type:String}
+
+
+,
+ function1:{type:String},
+    function2:{type:String},
+    function3:{type:String},
+    function4:{type:String},
+    function5:{type:String},
+    function6:{type:String},
+    function7:{type:String},
+    function8:{type:String},
+    function9:{type:String},
+    function10:{type:String},
+
+whyImage1:{type:String},
+ whyImage2:{type:String},
+ whyImage3:{type:String},
+ whyImage4:{type:String},
+    
+
     wytexttitleone:{type:String},
     whytextdescriptionone:{type:String},
       wytexttitletwo:{type:String},
@@ -82,6 +107,8 @@ image:{
     whytextdescriptithree:{type:String},
       wytexttitlefour:{type:String},
     whytextdescriptionfour:{type:String},
+
+    physicalImage1:{type:String},physicalImage2:{type:String},
     physicalaititle:{type:String},
     pysicalaidescition:{type:String},
      physicalaisubtitleone:{type:String},
@@ -108,6 +135,10 @@ image:{
     safteycardtitlesix:{type:String},
     safteycarddescriptionsix:{type:String}
     ,
+safteyImage:{type:String},
+
+
+    
      digitalcardstitle:{type:String},
 digitalcardsdescription:{type:String},
  digitalcardssubtitleone:{type:String},
@@ -141,6 +172,29 @@ digitalcardssubdescriptionnine:{type:String}
  digitalcardssubtitleten:{type:String},
 digitalcardssubdescriptionten:{type:String}
   ,
+
+
+
+
+    digitalCardImage1:{type:String},
+  digitalCardImage2:{type:String},
+     digitalCardImage3:{type:String},
+     digitalCardImage4:{type:String},
+     digitalCardImage5:{type:String},
+     digitalCardImage6:{type:String},
+     digitalCardImage7:{type:String},
+     digitalCardImage8:{type:String},
+     digitalCardImage9:{type:String},
+     digitalCardImage10:{type:String}
+,
+
+
+
+
+
+
+
+
 MaterialFinish:{type:String},Headline:{type:String},
 Pricing:{type:String},Processing:{type:String},
 VisionSystem:{type:String},Dexterity:{type:String},

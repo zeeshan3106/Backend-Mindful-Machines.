@@ -1,0 +1,62 @@
+const digitalCardImagepath1 = req.files?.digitalCard1[0]?.path
+
+const digitalCardImageresult1 = await cloudinary.uploader.upload(digitalCardImagepath1 , {folder:"digitalCard"})
+
+
+const digitalCard1 = digitalCardImageresult1.secure_url;
+
+
+const digitalCardImagepath2 = req.files?.digitalCard2[0]?.path
+
+const digitalCardImageresult2 = await cloudinary.uploader.upload(digitalCardImagepath2 , {folder:"digitalCard"})
+const digitalCard2 = digitalCardImageresult2.secure_url;
+
+
+const digitalCardImagepath3 = req.files?.digitalCard3[0]?.path
+
+const digitalCardImageresult3 = await cloudinary.uploader.upload(digitalCardImagepath3 , {folder:"digitalCard"})
+const digitalCard3 = digitalCardImageresult3?.secure_url;
+
+
+
+const digitalCardImagepath4 = req.files?.digitalCard4[0]?.path
+
+const digitalCardImageresult4 = await cloudinary.uploader.upload(digitalCardImagepath4 , {folder:"digitalCard"})
+const digitalCard4 = digitalCardImageresult4.secure_url;
+
+const digitalCardImagepath5 = req.files?.digitalCard5[0]?.path
+
+const digitalCardImageresult5 = await cloudinary.uploader.upload(digitalCardImagepath5 , {folder:"digitalCard"})
+const digitalCard5 = digitalCardImageresult5.secure_url;
+
+
+
+const digitalCardImagepath6 = req.files?.digitalCard6[0]?.path
+
+const digitalCardImageresult6 = await cloudinary.uploader.upload(digitalCardImagepath6 , {folder:"digitalCard"})
+const digitalCard6 = digitalCardImageresult6.secure_url;
+
+
+const digitalCardImagepath7 = req.files?.digitalCard7[0]?.path
+
+const digitalCardImageresult7 = await cloudinary.uploader.upload(digitalCardImagepath7 , {folder:"digitalCard"})
+const digitalCard7 = digitalCardImageresult7.secure_url;
+
+
+
+const digitalCardImagepath8 = req.files?.digitalCard8[0]?.path
+
+const digitalCardImageresult8 = await cloudinary.uploader.upload(digitalCardImagepath8 , {folder:"digitalCard"})
+const digitalCard8 = digitalCardImageresult8.secure_url;
+
+
+const digitalCardImagepath9 = req.files?.digitalCard9[0]?.path
+
+const digitalCardImageresult9 = await cloudinary.uploader.upload(digitalCardImagepath9 , {folder:"digitalCard"})
+const digitalCard9 = digitalCardImageresult9.secure_url;
+
+
+const digitalCardImagepath10 = req.files?.digitalCard10[0]?.path
+
+const digitalCardImageresult10 = await cloudinary.uploader.upload(digitalCardImagepath10 , {folder:"digitalCard"})
+const digitalCard10 = digitalCardImageresult10.secure_url;

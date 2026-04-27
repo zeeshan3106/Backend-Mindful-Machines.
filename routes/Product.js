@@ -49,8 +49,38 @@ Productroute.get('/ratings',Ratings)
 
 
 
-Productroute.post('/productdetail',upload.single('image'),ProductDetailElemnts)
 
+Productroute.post('/productdetail',upload.fields([
+  
+  {name:"Slider1",maxCount:1},{name:"Slider2",maxCount:1},
+  {name:"Slider3",maxCount:1},{name:"Slider4",maxCount:1},
+  {name:"Slider5",maxCount:1},{name:"Slider6",maxCount:1},
+  {name:"Slider7",maxCount:1},{name:"Slider8",maxCount:1},
+  {name:"Slider9",maxCount:1},{name:"Slider10",maxCount:1},
+  
+    {name:"function1",maxCount:1},{name:"function2",maxCount:1},
+  {name:"function3",maxCount:1},{name:"function4",maxCount:1},
+  {name:"function5",maxCount:1},{name:"function6",maxCount:1},
+  {name:"function7",maxCount:1},{name:"function8",maxCount:1},
+  {name:"function9",maxCount:1},{name:"function10",maxCount:1},
+
+   {name:"whyImage1",maxCount:1},{name:"whyImage2",maxCount:1},
+  {name:"whyImage3",maxCount:1},{name:"whyImage4",maxCount:1},
+{name:"physicalImage1",maxCount:1},{name:"physicalImage2",maxCount:1},
+{name:"safteyImage1",maxCount:1},
+
+
+    {name:"digitalCardImage1",maxCount:1},{name:"digitalCardImage2",maxCount:1},
+  {name:"digitalCardImage3",maxCount:1},{name:"digitalCardImage4",maxCount:1},
+  {name:"digitalCardImage5",maxCount:1},{name:"digitalCardImage6",maxCount:1},
+  {name:"digitalCardImage7",maxCount:1},{name:"digitalCardImage8",maxCount:1},
+  {name:"digitalCardImage9",maxCount:1},{name:"digitalCardImage10",maxCount:1},
+
+  
+
+
+
+]),ProductDetailElemnts)
 Productroute.get('/product-info',GetProductInformation)
 
 
