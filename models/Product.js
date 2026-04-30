@@ -187,6 +187,7 @@ digitalcardssubdescriptionten:{type:String}
      digitalCardImage9:{type:String},
      digitalCardImage10:{type:String}
 ,
+heroImage:{type:String},
 
 
 

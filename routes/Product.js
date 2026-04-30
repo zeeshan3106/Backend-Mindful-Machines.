@@ -66,18 +66,18 @@ Productroute.post('/productdetail',upload.fields([
 
    {name:"whyImage1",maxCount:1},{name:"whyImage2",maxCount:1},
   {name:"whyImage3",maxCount:1},{name:"whyImage4",maxCount:1},
+
 {name:"physicalImage1",maxCount:1},{name:"physicalImage2",maxCount:1},
+
 {name:"safteyImage1",maxCount:1},
 
+  {name:"digitalCard1",maxCount:1},{name:"digitalCard2",maxCount:1},
+  {name:"digitalCard3",maxCount:1},{name:"digitalCard4",maxCount:1},
+  {name:"digitalCard5",maxCount:1},{name:"digitalCard6",maxCount:1},
+  {name:"digitalCard7",maxCount:1},{name:"digitalCard8",maxCount:1},
+  {name:"digitalCard9",maxCount:1},{name:"digitalCard10",maxCount:1},
 
-    {name:"digitalCardImage1",maxCount:1},{name:"digitalCardImage2",maxCount:1},
-  {name:"digitalCardImage3",maxCount:1},{name:"digitalCardImage4",maxCount:1},
-  {name:"digitalCardImage5",maxCount:1},{name:"digitalCardImage6",maxCount:1},
-  {name:"digitalCardImage7",maxCount:1},{name:"digitalCardImage8",maxCount:1},
-  {name:"digitalCardImage9",maxCount:1},{name:"digitalCardImage10",maxCount:1},
-
-  
-
+   {name:"heroImage",maxCount:1}
 
 
 ]),ProductDetailElemnts)

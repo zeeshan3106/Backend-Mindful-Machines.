@@ -196,7 +196,7 @@ const functionresult10 = await cloudinary.uploader.upload(functionfilepath10 , {
 const function10 = functionresult10.secure_url;
 
 
-const whyfilepath1 = req.files?. whyImage1[0]?.path
+const whyfilepath1 = req.files?.whyImage1[0]?.path
 
 const whyresult1 = await cloudinary.uploader.upload(whyfilepath1 , {folder:"whyImage"})
 
@@ -204,34 +204,34 @@ const whyresult1 = await cloudinary.uploader.upload(whyfilepath1 , {folder:"whyI
 const  whyImage1 = whyresult1.secure_url;
 
 
-const whyfilepath2 = req.files?. whyImage2[0]?.path
+const whyfilepath2 = req.files?.whyImage2[0]?.path
 
 const whyresult2 = await cloudinary.uploader.upload(whyfilepath2 , {folder:"whyImage"})
 const  whyImage2 = whyresult2.secure_url;
 
 
-const whyfilepath3 = req.files?. whyImage3[0]?.path
+const whyfilepath3 = req.files?.whyImage3[0]?.path
 
 const whyresult3 = await cloudinary.uploader.upload(whyfilepath3 , {folder:"whyImage"})
-const  whyImage3 = whyresult3?.secure_url;
+const  whyImage3 = whyresult3.secure_url;
 
 
 
-const whyfilepath4 = req.files?. whyImage4[0]?.path
+const whyfilepath4 = req.files?.whyImage4[0]?.path
 
 const whyresult4 = await cloudinary.uploader.upload(whyfilepath4 , {folder:"whyImage"})
 const  whyImage4 = whyresult4.secure_url;
 
 
-const physicalImagepath1 = req.files?. physicalImage1[0]?.path
+const physicalImagepath1 = req.files?.physicalImage1[0]?.path
 
-constphysicalresult1 = await cloudinary.uploader.upload(physicalImagepath1 , {folder:"physicalImage"})
+const physicalresult1 = await cloudinary.uploader.upload(physicalImagepath1 , {folder:"physicalImage"})
 
 
 const  physicalImage1 =physicalresult1.secure_url;
 
 
-const physicalImagepath2 = req.files?. physicalImage2[0]?.path
+const physicalImagepath2 = req.files?.physicalImage2[0]?.path
 
 const physicalresult2 = await cloudinary.uploader.upload(physicalImagepath2 , {folder:"physicalImage"})
 const  physicalImage2 =physicalresult2.secure_url;
@@ -246,76 +246,75 @@ const safteyresult1 = await cloudinary.uploader.upload(safteyImagepath1 , {folde
 const  safteyImage1 =physicalresult1.secure_url;
 
 
-
-
 const digitalCardImagepath1 = req.files?.digitalCard1[0]?.path
 
 const digitalCardImageresult1 = await cloudinary.uploader.upload(digitalCardImagepath1 , {folder:"digitalCard"})
 
 
-const digitalCard1 = digitalCardImageresult1.secure_url;
+const  digitalCardImage1 = digitalCardImageresult1.secure_url;
 
 
 const digitalCardImagepath2 = req.files?.digitalCard2[0]?.path
 
 const digitalCardImageresult2 = await cloudinary.uploader.upload(digitalCardImagepath2 , {folder:"digitalCard"})
-const digitalCard2 = digitalCardImageresult2.secure_url;
+const  digitalCardImage2 = digitalCardImageresult2.secure_url;
 
 
 const digitalCardImagepath3 = req.files?.digitalCard3[0]?.path
 
 const digitalCardImageresult3 = await cloudinary.uploader.upload(digitalCardImagepath3 , {folder:"digitalCard"})
-const digitalCard3 = digitalCardImageresult3?.secure_url;
+const  digitalCardImage3 = digitalCardImageresult3?.secure_url;
 
 
 
 const digitalCardImagepath4 = req.files?.digitalCard4[0]?.path
 
 const digitalCardImageresult4 = await cloudinary.uploader.upload(digitalCardImagepath4 , {folder:"digitalCard"})
-const digitalCard4 = digitalCardImageresult4.secure_url;
+const  digitalCardImage4 = digitalCardImageresult4.secure_url;
 
 const digitalCardImagepath5 = req.files?.digitalCard5[0]?.path
 
 const digitalCardImageresult5 = await cloudinary.uploader.upload(digitalCardImagepath5 , {folder:"digitalCard"})
-const digitalCard5 = digitalCardImageresult5.secure_url;
+const  digitalCardImage5 = digitalCardImageresult5.secure_url;
 
 
 
 const digitalCardImagepath6 = req.files?.digitalCard6[0]?.path
 
 const digitalCardImageresult6 = await cloudinary.uploader.upload(digitalCardImagepath6 , {folder:"digitalCard"})
-const digitalCard6 = digitalCardImageresult6.secure_url;
+const  digitalCardImage6 = digitalCardImageresult6.secure_url;
 
 
 const digitalCardImagepath7 = req.files?.digitalCard7[0]?.path
 
 const digitalCardImageresult7 = await cloudinary.uploader.upload(digitalCardImagepath7 , {folder:"digitalCard"})
-const digitalCard7 = digitalCardImageresult7.secure_url;
+const  digitalCardImage7 = digitalCardImageresult7.secure_url;
 
 
 
 const digitalCardImagepath8 = req.files?.digitalCard8[0]?.path
 
 const digitalCardImageresult8 = await cloudinary.uploader.upload(digitalCardImagepath8 , {folder:"digitalCard"})
-const digitalCard8 = digitalCardImageresult8.secure_url;
+const  digitalCardImage8 = digitalCardImageresult8.secure_url;
 
 
 const digitalCardImagepath9 = req.files?.digitalCard9[0]?.path
 
 const digitalCardImageresult9 = await cloudinary.uploader.upload(digitalCardImagepath9 , {folder:"digitalCard"})
-const digitalCard9 = digitalCardImageresult9.secure_url;
+const  digitalCardImage9 = digitalCardImageresult9.secure_url;
 
 
 const digitalCardImagepath10 = req.files?.digitalCard10[0]?.path
 
 const digitalCardImageresult10 = await cloudinary.uploader.upload(digitalCardImagepath10 , {folder:"digitalCard"})
-const digitalCard10 = digitalCardImageresult10.secure_url;
-
-
-
+const  digitalCardImage10 = digitalCardImageresult10.secure_url;
      
 
 
+const heroImagepath1 = req.files?.heroImage[0]?.path
+
+const heroImageresult1 = await cloudinary.uploader.upload(heroImagepath1 , {folder:"digitalCard"})
+const  heroImage = heroImageresult1.secure_url;
 
 
 
@@ -356,7 +355,7 @@ const digitalCard10 = digitalCardImageresult10.secure_url;
       wytexttitlefour,
     whytextdescriptionfour,
 
-    whyImage1,whyImage2,whyImage3,whyImage4,
+   
     
 
 
@@ -371,8 +370,7 @@ const digitalCard10 = digitalCardImageresult10.secure_url;
      physicalaisubtitletwo,
     pysicalaisubdescitiontwo,
 
-    physicalImage1,physicalImage2,
-
+   
 
 
 
@@ -398,8 +396,7 @@ const digitalCard10 = digitalCardImageresult10.secure_url;
     safteycarddescriptionsix
 
 
-   , safteyImage1
-
+   
 
 
 
@@ -409,21 +406,29 @@ const digitalCard10 = digitalCardImageresult10.secure_url;
   ,  digitalcardstitle,digitalcardsdescription,digitalcardssubtitleone,digitalcardssubdescriptionone,digitalcardssubtitletwo,digitalcardssubdescriptiontwo,digitalcardssubtitlethree,digitalcardssubdescriptionthree, digitalcardssubtitlefour,digitalcardssubdescriptionfour,digitalcardssubtitlefive,digitalcardssubdescriptionfive, digitalcardssubtitlesix,digitalcardssubdescriptionsix,digitalcardssubtitleseven,digitalcardssubdescriptionseven,digitalcardssubtitleeight,digitalcardssubdescriptioneight,digitalcardssubtitlenine,digitalcardssubdescriptionnine,digitalcardssubtitleten,digitalcardssubdescriptionten
    
   
-     ,digitalCardImage1,digitalCardImage2
-     ,digitalCardImage3,digitalCardImage4
-     ,digitalCardImage5,digitalCardImage6
-     ,digitalCardImage7,digitalCardImage8
-     ,digitalCardImage9,digitalCardImage10
-     
+    
 
   
   
   ,MaterialFinish,Headline,Pricing,Processing,VisionSystem,Dexterity,Interaction,Sensors,BatteryLife,Charging, SecondID
    
-    
+    ,
+ heroImage
+
+       ,Slider1, Slider2, Slider3, Slider4, Slider5, Slider6, Slider7, Slider8, Slider9, Slider10,
+
+ physicalImage1,physicalImage2
+, safteyImage1
 
 
-       ,Slider1, Slider2, Slider3, Slider4, Slider5, Slider6, Slider7, Slider8, Slider9, Slider10
+ ,digitalCardImage1,digitalCardImage2
+     ,digitalCardImage3,digitalCardImage4
+     ,digitalCardImage5,digitalCardImage6
+     ,digitalCardImage7,digitalCardImage8
+     ,digitalCardImage9,digitalCardImage10,
+
+     whyImage1,whyImage2,whyImage3,whyImage4
+
   })
         console.log(PRoductdetailadded)
 
@@ -463,7 +468,7 @@ export async function GetProductInformation(req,res)
 
   try{
 
-    const proId = "69eb8d7915828899b4e3013e"
+    const proId = "69f2f36f08e7fced5df713f4"
 
     const Productinfo = await ProductModel.find({_id:proId})
 
